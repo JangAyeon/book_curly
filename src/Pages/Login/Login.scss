@@ -1,0 +1,108 @@
+@import "../../Styles/reset.scss";
+@import "../../Styles/common.scss";
+
+.login_content {
+  /*전체 로그인 칸 중앙 정렬*/
+  @include flexCenter();
+
+  /*전체 로그인 칸 너비*/
+  width: 340px;
+  /*전체 로그인 칸이 위 아래 라우팅(header & footer 등) 사이에 나오도록!*/
+  margin: 0 auto;
+  padding-top: 90px;
+  /*글자 간격 조정*/
+  letter-spacing: -0.6px;
+  /*전체 기본 컬러 검정으로 설정*/
+  color: $dark-gray;
+
+  .login_section {
+    .login_title {
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center;
+    }
+    .login_container {
+      padding-top: 36px;
+      display: flex;
+      flex-direction: column;
+    }
+    .login_form {
+      .login_Id,
+      .login_Pw {
+        width: 340px;
+        /*100%해주면 이상하게 얘네만 칸 넘음..*/
+        height: 54px;
+        padding: 0 19px;
+        border: 1px solid $light-gray;
+        border-radius: $border-radius;
+        font-size: 14px;
+        line-height: 20px;
+        outline: none;
+      }
+
+      &::placeholder {
+        color: #ccc;
+        font-weight: 700;
+      }
+
+      /*focus 되었을 때 CSS 작성 필요*/
+
+      .login_Pw {
+        margin-top: 10px;
+      }
+
+      .login_checkbox {
+        overflow: hidden;
+        font-size: 13px;
+        padding-bottom: 28px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .label_checkbox {
+          float: left;
+          position: relative;
+
+          line-height: 20px;
+        }
+        .login_search {
+          float: right;
+
+          .bar {
+            margin: 3px 6px 0;
+          }
+        }
+      }
+      .login_btn {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        height: 54px;
+        border-radius: $border-radius;
+        text-align: center;
+        border: 1px solid $sub-purple;
+        background: $main-purple;
+        color: $main-white;
+        font-weight: 500;
+        font-size: 16px;
+      }
+    }
+
+    .loginTosignup {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      height: 54px;
+      margin-top: 10px;
+      border-radius: $border-radius;
+      text-align: center;
+      border: 1px solid $sub-purple;
+      background: $main-white;
+      color: $main-purple;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+}
