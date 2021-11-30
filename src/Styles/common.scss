@@ -19,15 +19,41 @@
   align-items: center;
 }
 
-$main-purple: #5f0080;
-$sub-purple: #5f0081;
-$main-gray: #4c4c4c;
-$dark-gray: #333333;
-$medium-gray: #666666;
-$light-gray: #999999;
-$gray-background: #f7f7f7;
+/*main Color*/
 $main-white: #ffffff;
-$point-orange: #fa622f;
+$main-black: #000000;
+$main-purple: #5f0080;
+
+/*background color*/
+$bg-sub-purple: #5f0081;
+$bg-light-purple: #bd76ff;
+$bg-gray-1: #f7f7f7;
+$bg-gray-2: #eeeeee;
+$bg-gray-3: #d8d8d8;
+
+/*text color*/
+$txt-main-gray: #4c4c4c;
+$txt-dark-gray: #333333;
+$txt-medium-gray: #666666;
+$txt-light-gray-1: #999999;
+$txt-light-gray-2: #949296;
+$txt-point-orange: #fa622f;
 
 /*login*/
 $border-radius: 3px;
+
+/*Font-size*/
+$font-large: 24px;
+$font-regular: 14px;
+$font-small: 12px;
+
+/*Font-weight*/
+/*$weight-bold:800;*/
+$weight-bold: 700;
+$weight-regular: 400;
+/*$weight-medium:500;*/
+
+/*Line-height*/
+$height-max: 42px;
+$height-regular: 24px;
+$height-min: 12px;

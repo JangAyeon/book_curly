@@ -50,7 +50,7 @@ class Login extends Component{
                                                 className="chk_security"
                                                 type="checkbox"
                                                 value="y"
-                                                checked="checked"></input>
+                                                ></input>
                                             보안 접속
                                         </lable>
                                         <div className="login_search">
