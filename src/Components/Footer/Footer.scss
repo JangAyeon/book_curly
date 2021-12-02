@@ -1,2 +1,87 @@
 @import "../../Styles/common.scss";
 @import "../../Styles/reset.scss";
+
+#footer {
+  width: 1050px;
+  display: block;
+  padding-bottom: 60px;
+  margin: 0 auto;
+  font-weight: $weight-regular;
+  letter-spacing: -0.2px;
+
+  .inner_footer {
+    padding-bottom: 20px;
+    .footer_cc {
+      float: left;
+      width: 534px;
+
+      .title_cc {
+        font-weight: $weight-bold;
+        font-size: 20px;
+        text-align: left;
+        color: $txt-dark-gray;
+        line-height: $height-regular;
+      }
+      .cc_view {
+        padding-top: 20px;
+
+        dl.list,
+        p.list {
+          font-size: 14px;
+          line-height: 22px;
+          letter-spacing: -0.2px;
+          text-align: left;
+
+          dt {
+            padding-top: 4px;
+            color: $txt-dark-gray;
+          }
+          dd {
+            color: $txt-light-gray-1;
+          }
+        }
+        p.list {
+          padding-top: 13px;
+          color: $txt-light-gray-1;
+        }
+      }
+
+      .cc_call .tit {
+        font-size: 28px;
+        line-height: 36px;
+        font-weight: 750;
+        padding-top: 4px;
+      }
+
+      .tit {
+        float: left;
+        width: 140px;
+
+        margin-right: 16px;
+        color: $txt-dark-gray;
+        line-height: 36px;
+        letter-spacing: -0.5px;
+        white-space: nowrap;
+      }
+    }
+    a.tit {
+      height: 45px;
+      padding-top: 4px;
+      margin-top: 3px;
+      border: 1px solid $bg-gray-3;
+      border-radius: 3px;
+      line-height: 22px;
+      text-align: center;
+      font-size: $font-regular;
+      font-weight: $weight-bold;
+    }
+  }
+
+  .company {
+    ///float: left;
+    padding-top: 29px;
+    font-size: $font-small;
+    color: $txt-light-gray-1;
+    line-height: 20px;
+  }
+}

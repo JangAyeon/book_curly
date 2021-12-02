@@ -41,7 +41,7 @@ class Footer extends Component{
 
                     </div>
                     <div className="company"> {/*left : about company*/}
-                        <ul className="link">
+                        <ul className="list">
                             <li><a className="link">컬리 소개</a></li>
                             <li><a className="link">컬리소개영상</a></li>
                             <li><a className="link">인재채용</a></li>
