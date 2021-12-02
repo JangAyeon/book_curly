@@ -13,7 +13,7 @@
     padding-bottom: 20px;
     .footer_cc {
       float: left;
-      width: 534px;
+      width: 525px;
 
       .title_cc {
         font-weight: $weight-bold;
@@ -78,10 +78,24 @@
   }
 
   .company {
-    ///float: left;
+    float: right;
+    width: 525px;
     padding-top: 29px;
     font-size: $font-small;
     color: $txt-light-gray-1;
     line-height: 20px;
+    .list {
+      width: 100%;
+      padding-bottom: 29px;
+
+      .link {
+        float: left;
+        padding-right: 16px;
+        font-size: $font-regular;
+        font-weight: $weight-regular;
+        color: $txt-dark-gray;
+        line-height: 18px;
+      }
+    }
   }
 }

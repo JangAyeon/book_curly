@@ -8,7 +8,7 @@ import Footer from "./Components/Footer/Footer";
 function App() {
   return (
     <div className="App">
-      <h5>test</h5>
+      {/*<h5>test</h5>*/}
       {/*<Login></Login>*/}
       <Footer></Footer>
 
