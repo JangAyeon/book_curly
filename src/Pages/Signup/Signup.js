@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { renderIntoDocument } from "react-dom/cjs/react-dom-test-utils.production.min";
+//import { Link, withRouter } from "react-router-dom";
 import "./Signup.scss";
 
 class Signup extends Component {
@@ -24,6 +24,27 @@ class Signup extends Component {
                     *<span className="screen_out">필수항목</span>
                   </span>
                 </th>
+                <td>
+                  <input
+                    type="text"
+                    name="id"
+                    maxlength="16"
+                    label="아이디"
+                    placeholder="6자 이상의 영문 혹은 영문과 숫자를 조합"
+                    data-validator="false"
+                    className="Signup_Input"
+                    onChange={this.handleInput}
+                    onClick={this.handleShowIdGuide}
+                  />
+                  {/*
+                  <Link
+                    to="/"
+                    className="Signup-checkBtn"
+                    onClick={this.checkId}
+                  >
+                    중복확인
+                  </Link>*/}
+                </td>
               </tr>
               <tr></tr>
               <tr></tr>
