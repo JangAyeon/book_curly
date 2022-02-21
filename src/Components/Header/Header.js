@@ -23,7 +23,7 @@ const UserMenu = () => {
 const Logo = () => {
   return (
     <div className="Logo">
-      <Link to="/">
+      <Link to="/book_curly">
         <img
           className="Logo_img"
           src="https://res.kurly.com/images/marketkurly/logo/logo_x2.png"

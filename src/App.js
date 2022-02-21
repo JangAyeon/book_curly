@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Header />
-      <Route path="/" component={Main} exact />
+      <Route path="/book_curly" component={Main} exact />
       <Route path="/login" component={Login} />
       <Route path="/signup" component={Signup} />
       <Route path="/list/:type" component={List} />
