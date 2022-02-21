@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  button,
+  select {
+    outline: none;
+  }
+}
+
+#root {
+  font-family: "Noto Sans KR", "Segoe UI", "Tahoma", "Geneva", "Verdana",
+    sans-serif;
+}
+
+@mixin flexCenter {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin CenterContainer {
+  width: 1050px;
+
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+/*main Color*/
+$main-white: #ffffff;
+$main-black: #000000;
+$main-purple: #5f0080;
+
+/*background color*/
+$bg-sub-purple: #5f0081;
+$bg-light-purple: #f7f3fa;
+$bg-gray-1: #f7f7f7;
+$bg-gray-2: #eeeeee;
+$bg-gray-3: #d8d8d8;
+
+/*text color*/
+$txt-main-gray: #4c4c4c;
+$txt-dark-gray: #333333;
+$txt-medium-gray: #666666;
+$txt-light-gray-1: #999999;
+$txt-light-gray-2: #949296;
+$txt-point-orange: #fa622f;
+
+/*login*/
+$border-radius: 3px;
+
+/*Font-size*/
+$font-large: 24px;
+$font-regular: 14px;
+$font-small: 12px;
+
+/*Font-weight*/
+/*$weight-bold:800;*/
+$weight-bold: 700;
+$weight-regular: 400;
+/*$weight-medium:500; login.scss*/
+
+/*Line-height*/
+$height-max: 42px;
+$height-regular: 24px;
+$height-min: 12px;

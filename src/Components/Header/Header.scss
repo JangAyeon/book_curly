@@ -1,0 +1,126 @@
+@import "../../Styles/common.scss";
+@import "../../Styles/reset.scss";
+
+button {
+  color: transparent;
+  padding: 0;
+  border: none;
+  background: none;
+  //display: flex;
+}
+
+.UserMenu {
+  margin: 10px 0;
+  font-size: $font-small;
+  font-weight: $weight-regular;
+
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  .UserMenu_List {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    li {
+      padding: 0px 12px;
+    }
+    [class*="join"] {
+      color: $main-purple;
+      border-right: solid 1px $bg-gray-3;
+    }
+    [class*="login"] {
+      border-right: solid 1px $bg-gray-3;
+    }
+  }
+}
+
+.Logo {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  .Logo_img {
+    width: 100px;
+    height: 80px;
+  }
+}
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+
+  .Navbar_search {
+    position: relative;
+    bottom: 3px;
+    input[type*="text"] {
+      width: 242px;
+      height: 36px;
+      padding: 0 60px 0 14px;
+      border: 1px solid $bg-gray-1;
+      border-radius: 18px;
+      color: $txt-medium-gray;
+      background-color: $bg-gray-2;
+    }
+    input[type*="image"] {
+      position: relative;
+      left: -40px;
+      top: 10px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .Navbar_main {
+    display: flex;
+    flex-direction: row;
+    span {
+      margin-right: 35px;
+      background: url(https://res.kurly.com/pc/service/common/1908/ico_gnb_all_off.png)
+        no-repeat;
+      li {
+        position: relative;
+        left: 25px;
+        &:hover {
+          border: none;
+        }
+      }
+
+      &:hover {
+        background: url(https://res.kurly.com/pc/service/common/1908/ico_gnb_all.png)
+          no-repeat;
+        color: $main-purple;
+      }
+    }
+
+    li {
+      margin-right: 35px;
+      font-size: 16px;
+      font-weight: $weight-bold;
+      padding-bottom: 3px;
+      &:hover {
+        color: $main-purple;
+        border-bottom: 2px solid $main-purple;
+      }
+    }
+  }
+  [class*="btn"] {
+    background: no-repeat 50% 50%;
+    height: 50px;
+    width: 50px;
+  }
+  .loc_btn {
+    background-image: url(https://res.kurly.com/pc/ico/2008/ico_delivery_setting.svg?ver=1);
+  }
+  .info_btn {
+    background-image: url(https://res.kurly.com/pc/service/pick/btn-heart-off.svg);
+  }
+  .cart_btn {
+    background-image: url(https://res.kurly.com/pc/service/common/2011/ico_cart.svg);
+  }
+}
+
+.Header {
+  @include CenterContainer();
+}
