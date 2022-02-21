@@ -113,7 +113,7 @@ const Login = () => {
                 </div>
                 <button className="login_btn" onClick={onLogin}>
                   로그인
-                  {login && <Redirect to="/" />}
+                  {login && <Redirect to="/book_curly" />}
                 </button>
               </div>
               <button className="loginTosignup">
@@ -132,7 +132,7 @@ const Login = () => {
                 data-type="logout"
                 onClick={KakaoAuth}
               >
-                카카오계정으로 로그인
+                카카오계정으로 로그아웃
               </button>
             </div>
           </div>

@@ -7,7 +7,7 @@ const logoutKaKao = () => {
   }
   window.Kakao.Auth.logout(function (response) {
     alert(response + " logout");
-    window.location.href = "/";
+    window.location.href = "/book_curly";
   });
 };
 
@@ -28,7 +28,7 @@ const loginKakao = () => {
             success: (res) => {
               const kakao_account = res.kakao_account;
               console.log(kakao_account);
-              //window.location.href = "/";
+              window.location.href = "/book_curly";
             },
           });
         },
