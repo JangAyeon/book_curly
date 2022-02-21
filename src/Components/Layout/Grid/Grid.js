@@ -68,7 +68,7 @@ const Grid = ({ id, orders, type, query, header }) => {
     console.log("API 요청");
 
     get();
-  }, [id, type]);
+  }, [id, type, query]);
 
   //비동기적 동작
   useEffect(() => {}, [value]);

@@ -127,13 +127,13 @@ const Login = () => {
                 카카오계정으로 로그인
               </button>
 
-              <button
+              {/*<button
                 className="KakaoLogout_btn"
                 data-type="logout"
                 onClick={KakaoAuth}
               >
                 카카오계정으로 로그아웃
-              </button>
+              </button>*/}
             </div>
           </div>
         </div>

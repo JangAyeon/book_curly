@@ -2,18 +2,44 @@ import React, { useState } from "react";
 import "../Header/Header.scss";
 import { Link } from "react-router-dom";
 import { Header_Category } from "../../Shared/CategoryId";
+import KakaoAuth from "../../Pages/Login/KakaoAuth";
+import { decrypt } from "../CryptoJS/CryptoJS";
+
+const getUsername = () => {
+  return decrypt(localStorage.getItem("User"), "User").profile.nickname;
+};
 
 const UserMenu = () => {
+  //console.log(localStorage.getItem("kakao_d13afba05b7222903cff5f3a2226caa2"))
+  //getUsername();
   return (
     <div className="UserMenu">
       <ul className="UserMenu_List">
-        <li className="UserMenu_List_join">
-          <Link to="/signup">회원가입</Link>
-        </li>
-        <li className="UserMenu_List_login">
-          {" "}
-          <Link to="/login">로그인</Link>
-        </li>
+        {localStorage.getItem("kakao_d13afba05b7222903cff5f3a2226caa2") && (
+          <>
+            <li className="UserMenu_List_name">{getUsername()}</li>
+            <li className="UserMenu_List_profile">
+              <Link to="/myprofile">내정보</Link>
+            </li>
+            <li
+              className="UserMenu_List_logout"
+              data-type="logout"
+              onClick={KakaoAuth}
+            >
+              로그아웃
+            </li>
+          </>
+        )}
+        {!localStorage.getItem("kakao_d13afba05b7222903cff5f3a2226caa2") && (
+          <>
+            <li className="UserMenu_List_join">
+              <Link to="/signup">회원가입</Link>
+            </li>
+            <li className="UserMenu_List_login">
+              <Link to="/login">로그인</Link>
+            </li>
+          </>
+        )}
 
         <li className="UserMenu_List_ask">고객센터</li>
       </ul>

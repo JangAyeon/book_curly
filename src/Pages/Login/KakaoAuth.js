@@ -1,12 +1,14 @@
 import React from "react";
+import { encrypt } from "../../Components/CryptoJS/CryptoJS";
 
 const logoutKaKao = () => {
-  if (!window.Kakao.Auth.getAccessToken()) {
+  if (!localStorage.getItem("kakao_d13afba05b7222903cff5f3a2226caa2")) {
     console.log("Not logged in");
     return;
   }
   window.Kakao.Auth.logout(function (response) {
     alert(response + " logout");
+    localStorage.removeItem("User");
     window.location.href = "/book_curly";
   });
 };
@@ -27,7 +29,8 @@ const loginKakao = () => {
             url: "/v2/user/me",
             success: (res) => {
               const kakao_account = res.kakao_account;
-              console.log(kakao_account);
+              localStorage.setItem("User", encrypt(kakao_account, "User"));
+
               window.location.href = "/book_curly";
             },
           });
