@@ -1,0 +1,73 @@
+@import "../../Styles/reset.scss";
+@import "../../Styles/common.scss";
+
+.Profile {
+  @include flexCenter();
+  @include CenterContainer();
+
+  display: flex;
+  flex-direction: row;
+
+  padding: 0 30px;
+  height: 100px;
+
+  .basic_info {
+    height: 100%;
+
+    display: flex;
+
+    border-right: solid 1px $txt-light-gray-1;
+    padding: 0 20px;
+    p {
+      color: $txt-medium-gray;
+    }
+
+    img {
+      padding-right: 20px;
+      height: 100%;
+    }
+    .basic_info_req {
+      background-color: $bg-gray-1;
+      border: solid 1px $txt-medium-gray;
+      border-radius: 10px;
+      padding: 10px;
+      p {
+        padding: 10px 0;
+        width: 100%;
+      }
+
+      p.name {
+        color: $bg-sub-purple;
+        font-weight: $weight-bold;
+      }
+      p.email {
+        font-weight: $weight-regular;
+      }
+    }
+  }
+  .extra_info {
+    width: 65%;
+    height: 100%;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 0 20px;
+    [class*="extra"] {
+      padding: 20px;
+      background-color: $bg-gray-1;
+      height: 100%;
+      color: $txt-medium-gray;
+      border: solid 1px $txt-medium-gray;
+      border-radius: 10px;
+
+      p {
+        padding-bottom: 10px;
+        font-weight: $weight-regular;
+      }
+      p.category {
+        color: $txt-dark-gray;
+        font-weight: $weight-bold;
+      }
+    }
+  }
+}
