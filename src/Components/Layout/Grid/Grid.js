@@ -2,33 +2,36 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Grid.scss";
 import { Sortby } from "../Title/Title";
+import { Link } from "react-router-dom";
 
 function GridItems({
   title,
   id,
   image,
-
   salerate,
   saleprice,
   author,
   publisher,
+  isbn,
 }) {
   return (
     <div className="Item">
-      <div className="Item_img">
-        <img alt={id} src={image}></img>
-      </div>
-      <div className="Item_info">
-        <p className="title">{title}</p>
-        <div className="sub_info">
-          <span className="author">{author}</span>
-          <span className="publisher">{publisher}</span>
+      <Link to={`/detail/${isbn}`}>
+        <div className="Item_img">
+          <img alt={id} src={image}></img>
         </div>
-        <div className="sale_info">
-          <span className="price">{saleprice}원</span>
-          <span className="sale">{salerate}% ↓</span>
+        <div className="Item_info">
+          <p className="title">{title}</p>
+          <div className="sub_info">
+            <span className="author">{author}</span>
+            <span className="publisher">{publisher}</span>
+          </div>
+          <div className="sale_info">
+            <span className="price">{saleprice}원</span>
+            <span className="sale">{salerate}% ↓</span>
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }
@@ -120,6 +123,7 @@ const Grid = ({ id, orders, type, query, header }) => {
                 salerate={item.discountRate}
                 author={item.author}
                 publisher={item.publisher}
+                isbn={item.isbn}
               />
             </React.Fragment>
           ))}

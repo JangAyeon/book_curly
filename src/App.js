@@ -5,6 +5,7 @@ import Main from "./Pages/Main/Main";
 import List from "./Pages/List/List";
 import KakaoProfile from "./Pages/UserProfile/KakaoProfile";
 import Header from "./Components/Header/Header";
+import Detail from "./Pages/Detail/Detail";
 
 import { Route } from "react-router";
 
@@ -17,7 +18,7 @@ function App() {
       <Route path="/myprofile" component={KakaoProfile} />
       <Route path="/signup" component={Signup} />
       <Route path="/list/:type" component={List} />
-
+      <Route path="/detail/:isbn" component={Detail} />
       <Footer />
     </>
   );
