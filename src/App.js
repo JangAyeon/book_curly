@@ -18,7 +18,7 @@ function App() {
       <Route path="/myprofile" component={KakaoProfile} />
       <Route path="/signup" component={Signup} />
       <Route path="/list/:type" component={List} />
-      <Route path="/detail/:isbn" component={Detail} />
+      <Route path="/detail/:title" component={Detail} />
       <Footer />
     </>
   );

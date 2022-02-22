@@ -6,11 +6,14 @@
   @include flexCenter();
   display: grid;
 
-  /* 4개씩 반복해서 배열 */
-  grid-template-columns: repeat(3, auto);
+  /* 3개씩 반복해서 배열 */
+  grid-template-columns: repeat(3, 30%);
+
+  /* 간격 조정 */
 
   /* 간격 조정 */
   gap: 80px 5%;
+
   align-items: start;
   .Item_img {
     height: 435px;

@@ -4,6 +4,7 @@ import "./slick-theme.css";
 import "./slick.css";
 import "./Carousel.scss";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function CarouselItems({
   title,
@@ -14,26 +15,28 @@ function CarouselItems({
   saleprice,
 }) {
   return (
-    <div className="Item">
-      <div className="Item_img">
-        <img alt={id} src={image}></img>
+    <Link to={`/detail/${title}`}>
+      <div className="Item">
+        <div className="Item_img">
+          <img alt={id} src={image}></img>
 
-        <img
-          className="Cart"
-          alt="cart"
-          src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg"
-        ></img>
-      </div>
-      <div className="Item_info">
-        <p className="title">{title}</p>
-        <div className="sale_info">
-          <span className="sale">{salerate}%</span>
-          <span className="price">{saleprice}원</span>
+          <img
+            className="Cart"
+            alt="cart"
+            src="https://s3.ap-northeast-2.amazonaws.com/res.kurly.com/kurly/ico/2021/cart_white_45_45.svg"
+          ></img>
         </div>
+        <div className="Item_info">
+          <p className="title">{title}</p>
+          <div className="sale_info">
+            <span className="sale">{salerate}%</span>
+            <span className="price">{saleprice}원</span>
+          </div>
 
-        <p className="price">{standardprice}원</p>
+          <p className="price">{standardprice}원</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

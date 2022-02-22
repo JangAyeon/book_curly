@@ -12,11 +12,10 @@ function GridItems({
   saleprice,
   author,
   publisher,
-  isbn,
 }) {
   return (
     <div className="Item">
-      <Link to={`/detail/${isbn}`}>
+      <Link to={`/detail/${title}`}>
         <div className="Item_img">
           <img alt={id} src={image}></img>
         </div>
@@ -123,7 +122,6 @@ const Grid = ({ id, orders, type, query, header }) => {
                 salerate={item.discountRate}
                 author={item.author}
                 publisher={item.publisher}
-                isbn={item.isbn}
               />
             </React.Fragment>
           ))}
