@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/book_curly/static/css/main.1b364364.css",
-    "main.js": "/book_curly/static/js/main.5e60e12e.js",
+    "main.css": "/book_curly/static/css/main.cdb3fa36.css",
+    "main.js": "/book_curly/static/js/main.1afbf1d3.js",
     "static/js/787.87b2dc3a.chunk.js": "/book_curly/static/js/787.87b2dc3a.chunk.js",
     "index.html": "/book_curly/index.html",
-    "main.1b364364.css.map": "/book_curly/static/css/main.1b364364.css.map",
-    "main.5e60e12e.js.map": "/book_curly/static/js/main.5e60e12e.js.map",
+    "main.cdb3fa36.css.map": "/book_curly/static/css/main.cdb3fa36.css.map",
+    "main.1afbf1d3.js.map": "/book_curly/static/js/main.1afbf1d3.js.map",
     "787.87b2dc3a.chunk.js.map": "/book_curly/static/js/787.87b2dc3a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b364364.css",
-    "static/js/main.5e60e12e.js"
+    "static/css/main.cdb3fa36.css",
+    "static/js/main.1afbf1d3.js"
   ]
 }
