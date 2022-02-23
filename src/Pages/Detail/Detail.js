@@ -2,21 +2,43 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Detail.scss";
 
+function GetsearchTarget(key) {
+  if (100 <= key && key < 500) {
+    if (key < 200) return "book";
+    else if (key < 300) return "foreign";
+    else if (key < 400) return "cd";
+    else return "dvd";
+  } else {
+    return;
+  }
+}
+
 function GetDetail(props) {
+  console.log(props);
   const { title } = props.match.params;
-  console.log(title);
+  const { key } = props.location.state;
+  const searchTarget = GetsearchTarget(key);
+
+  console.log(key, title, searchTarget);
   const [TitleData, setTitleData] = useState([]);
 
   useEffect(() => {
     async function getIsbnData() {
+      let response = null;
       try {
         //응답 성공
-        //https://book.interpark.com/api/search.api?key=89A91C143CDE9705B057F05F9A1F5B538CD290A7AD80599201DCE4401BEEFE8A&output=json&queryType=isbn&query=${isbn}`
-        const response = await axios.get(
-          `https://book.interpark.com/api/search.api?key=89A91C143CDE9705B057F05F9A1F5B538CD290A7AD80599201DCE4401BEEFE8A&output=json&query=${title}`
-        );
+
+        if (key && searchTarget) {
+          response = await axios.get(
+            `https://book.interpark.com/api/search.api?key=89A91C143CDE9705B057F05F9A1F5B538CD290A7AD80599201DCE4401BEEFE8A&output=json&query=${title}&categoryId=${key}&searchTarget=${searchTarget}`
+          );
+        } else {
+          response = await axios.get(
+            `https://book.interpark.com/api/search.api?key=89A91C143CDE9705B057F05F9A1F5B538CD290A7AD80599201DCE4401BEEFE8A&output=json&query=${title}`
+          );
+        }
         setTitleData(response.data.item[0]);
-        //console.log(response.data.item[0]);
+        console.log(response.data.item[0]);
         //console.log("ISBN Detail DATA : ", TitleData);
       } catch (error) {
         //응답 실패
@@ -24,7 +46,7 @@ function GetDetail(props) {
       }
     }
     getIsbnData();
-  }, []);
+  }, [key, title]);
 
   return (
     <>

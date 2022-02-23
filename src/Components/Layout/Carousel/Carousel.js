@@ -13,9 +13,17 @@ function CarouselItems({
   standardprice,
   salerate,
   saleprice,
+  categoryId,
 }) {
   return (
-    <Link to={`/detail/${title}`}>
+    <Link
+      to={{
+        pathname: `/detail/${title}`,
+        state: {
+          key: categoryId,
+        },
+      }}
+    >
       <div className="Item">
         <div className="Item_img">
           <img alt={id} src={image}></img>
@@ -90,6 +98,7 @@ const Carousel = ({ params }) => {
                 standardprice={item.priceStandard}
                 saleprice={item.priceSales}
                 salerate={item.discountRate}
+                categoryId={item.categoryId}
               />
             </React.Fragment>
           ))}

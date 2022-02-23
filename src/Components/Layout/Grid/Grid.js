@@ -12,10 +12,18 @@ function GridItems({
   saleprice,
   author,
   publisher,
+  categoryId,
 }) {
   return (
-    <div className="Item">
-      <Link to={`/detail/${title}`}>
+    <Link
+      to={{
+        pathname: `/detail/${title}`,
+        state: {
+          key: categoryId,
+        },
+      }}
+    >
+      <div className="Item">
         <div className="Item_img">
           <img alt={id} src={image}></img>
         </div>
@@ -30,8 +38,8 @@ function GridItems({
             <span className="sale">{salerate}% ↓</span>
           </div>
         </div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 }
 
@@ -44,7 +52,7 @@ const Grid = ({ id, orders, type, query, header }) => {
   async function get() {
     try {
       let response = null;
-      if (type != "search") {
+      if (type !== "search") {
         console.log("기타 요청");
         response = await axios.get(
           `https://book.interpark.com/api/${type}.api?key=89A91C143CDE9705B057F05F9A1F5B538CD290A7AD80599201DCE4401BEEFE8A&output=json&query=${query}&categoryId=${id}`
@@ -122,6 +130,7 @@ const Grid = ({ id, orders, type, query, header }) => {
                 salerate={item.discountRate}
                 author={item.author}
                 publisher={item.publisher}
+                categoryId={item.categoryId}
               />
             </React.Fragment>
           ))}
