@@ -88,17 +88,26 @@ button {
           position: absolute;
 
           left: 0;
-
+          z-index: 999;
           width: 150px;
           display: none;
           background-color: $main-white;
 
           li {
-            padding: 10px 0;
+            padding: 10px 15px;
             font-size: 16px;
+            border-bottom: 1px solid $txt-light-gray-1;
             &:hover {
               color: $bg-sub-purple;
               .sub_sub {
+                color: $txt-dark-gray;
+                li {
+                  border-bottom: 1px solid $txt-light-gray-1;
+                  &:hover {
+                    color: $bg-sub-purple;
+                  }
+                }
+
                 display: block;
                 cursor: pointer;
               }
