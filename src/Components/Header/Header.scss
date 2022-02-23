@@ -75,6 +75,7 @@ button {
   .Navbar_main {
     display: flex;
     flex-direction: row;
+
     span {
       margin-right: 35px;
       background: url(https://res.kurly.com/pc/service/common/1908/ico_gnb_all_off.png)
@@ -82,28 +83,52 @@ button {
       li {
         position: relative;
         left: 25px;
-        &:hover {
-          border: none;
-        }
+
         .Navbar_sub {
           position: absolute;
-          .sub {
+
+          left: 0;
+
+          width: 150px;
+          display: none;
+          background-color: $main-white;
+
+          li {
+            padding: 10px 0;
+            font-size: 16px;
+            &:hover {
+              color: $bg-sub-purple;
+              .sub_sub {
+                display: block;
+                cursor: pointer;
+              }
+            }
+          }
+
+          ul,
+          li {
             margin: 0;
             left: 0;
+            border: none;
+          }
+
+          .sub_sub {
+            position: absolute;
+            left: 100%;
             width: 150px;
-            .sub_sub {
-              position: absoulte;
-              left: 100%;
-              width: 150px;
-            }
+            top: 0;
+            display: none;
+            background-color: $main-white;
           }
         }
       }
 
       &:hover {
-        background: url(https://res.kurly.com/pc/service/common/1908/ico_gnb_all.png)
-          no-repeat;
-        color: $main-purple;
+        .Navbar_sub {
+          display: block;
+          padding-top: 20px;
+          cursor: pointer;
+        }
       }
     }
 
@@ -115,6 +140,13 @@ button {
       &:hover {
         color: $main-purple;
         border-bottom: 2px solid $main-purple;
+        cursor: pointer;
+      }
+    }
+    span li {
+      &:hover {
+        color: $txt-dark-gray;
+        cursor: pointer;
       }
     }
   }
