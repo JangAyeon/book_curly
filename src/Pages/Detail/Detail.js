@@ -67,19 +67,21 @@ const Detail = (props) => {
           <span>(리뷰 {props.ReviewCount}개)</span>
         </div>
         <div className="Price">
-          <span>{props.priceSales}</span>
-          <span>
-            [{props.discountRate}% ↓ {props.priceStandard - props.priceSales}원
-            할인]
+          <p>북컬리 특가</p>
+          <span className="priceSales">{props.priceSales}원 </span>
+          <span className="discountRate">{props.discountRate}% ↓ </span>
+          <span className="discountPrice">
+            {props.priceStandard - props.priceSales}원 할인
           </span>
         </div>
+
         <div className="Description">{props.description}</div>
 
         <div className="btn">
-          <button className="detail_link">
+          <div className="detail_link">
             <a href={props.AdditionalLink}> 인터파크 바로가기</a>
-          </button>
-          <button className="payment">결제</button>
+          </div>
+          <div className="payment">결제</div>
         </div>
       </div>
     </div>
