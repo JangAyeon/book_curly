@@ -72,7 +72,28 @@ const Navbar = () => {
     <div className="Navbar">
       <ul className="Navbar_main">
         <span>
-          <li>전체 카테고리</li>
+          <li>
+            전체 카테고리
+            <ul className="Navbar_sub">
+              <li className="sub">
+                국내 도서
+                <ul className="sub_sub">
+                  <li>소설</li>
+                  <li>시/에세이</li>
+                  <li>에술/대중문화</li>
+                  <li>사회과학</li>
+                  <li>역사와 문화</li>
+                  <li>사회과학</li>
+                  <li>잡지</li>
+                  <li>만화</li>
+                  <li>유라</li>
+                </ul>
+              </li>
+              <li className="sub">외국 도서</li>
+              <li className="sub">음반</li>
+              <li className="sub">DVD</li>
+            </ul>
+          </li>
         </span>
         <li>
           <Link

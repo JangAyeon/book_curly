@@ -85,6 +85,19 @@ button {
         &:hover {
           border: none;
         }
+        .Navbar_sub {
+          position: absolute;
+          .sub {
+            margin: 0;
+            left: 0;
+            width: 150px;
+            .sub_sub {
+              position: absoulte;
+              left: 100%;
+              width: 150px;
+            }
+          }
+        }
       }
 
       &:hover {
