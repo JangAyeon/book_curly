@@ -31,6 +31,7 @@ import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import Post from "../../Components/Post/Post";
 import "../Signup/Signup.scss";
+import { IsId, IsEmail, IsPassword } from "../Signup/Validation";
 
 const Signup = () => {
   const [inputs, setInputs] = useState({
@@ -182,8 +183,9 @@ const Signup = () => {
             />
             {showIdInfo ? (
               <div className="signup_Id_info">
-                <li>6자 이상의 영문과 숫자를 조합</li>
-                <li> 아이디 중복 확인</li>
+                <li className={IsId(Id) ? "true" : "false"}>
+                  6자 이상의 영문과 숫자를 조합
+                </li>
               </div>
             ) : null}
           </div>
@@ -207,9 +209,12 @@ const Signup = () => {
             />
             {showPwdInfo ? (
               <div className="signup_Id_info">
-                <li>10자 이상 입력</li>
-                <li>영문/숫자/특수문자(공백 제외)만 허용하며, 2개 이상 조합</li>
-                <li>동일한 숫자 3개 이상 연속 사용 불가</li>
+                <li className={Pwd.length >= 10 ? "true" : "false"}>
+                  10자 이상 입력
+                </li>
+                <li className={IsPassword(Pwd) ? "true" : "false"}>
+                  영문/숫자/특수문자(공백 제외)만 허용하며, 3가지 조합
+                </li>
               </div>
             ) : null}
           </div>
@@ -232,7 +237,9 @@ const Signup = () => {
             />
             {showRePwdInfo ? (
               <div className="signup_Id_info">
-                <li>동일한 비밀번호를 입력해주세요</li>
+                <li className={Pwd === RePwd ? "true" : null}>
+                  동일한 비밀번호를 입력해주세요
+                </li>
               </div>
             ) : null}
           </div>
@@ -256,6 +263,7 @@ const Signup = () => {
           <div className="signup_Email_title">
             이메일<span className="ico">*</span>
           </div>
+
           <input
             className="signup_Email_input"
             type="text"
@@ -264,6 +272,7 @@ const Signup = () => {
             onChange={onChange}
             value={Email}
           />
+
           <div className="signup_Email_check">중복확인</div>
         </div>
 
@@ -391,7 +400,7 @@ const Signup = () => {
       <div className="signup_Submit_wrap">
         <button className="signup_Submit_btn" onClick={onSignup}>
           회원가입
-          {Signup && <Redirect to="/" />}
+          {Signup && <Redirect to="/book_curly" />}
         </button>
       </div>
     </div>
@@ -399,6 +408,5 @@ const Signup = () => {
 };
 
 export default Signup;
-
 
 //회원가입
