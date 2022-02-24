@@ -25,6 +25,9 @@ function GetDetail(props) {
   useEffect(() => {
     async function getIsbnData() {
       let response = null;
+      console.log(
+        `https://book.interpark.com/api/search.api?key=89A91C143CDE9705B057F05F9A1F5B538CD290A7AD80599201DCE4401BEEFE8A&output=json&query=${title}&categoryId=${key}&searchTarget=${searchTarget}`
+      );
       try {
         //응답 성공
 
