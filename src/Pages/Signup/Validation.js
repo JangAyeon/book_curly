@@ -1,7 +1,7 @@
-/*export function IsEmail(value) {
+export function IsEmail(value) {
   var regExp = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
   return regExp.test(value) ? true : false;
-} */
+}
 
 export function IsId(value) {
   let regExp = /[A-Za-z0-9]\w{4,}/;
