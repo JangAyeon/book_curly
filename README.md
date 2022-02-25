@@ -1,6 +1,6 @@
 ## 📖BookCurly
 
-- [마켓컬리](https://www.kurly.com/shop/main/index.php?utm_source=1055&utm_medium=2202&utm_campaign=home_hashtag&utm_term=&gclid=CjwKCAiA9tyQBhAIEiwA6tdCrJeFgts5vbFCL6VrOjIAEPxfM0T2PrWZWCo67LxOtYnhvUAt6ywrLxoCDGMQAvD_BwE#%EB%A7%88%EC%BC%93%EC%BB%AC%EB%A6%AC&utm_content=brand) 사이트의 [페이지와 인터파크 도서 API](http://book.interpark.com/bookPark/html/bookpinion/api_main.html) 이용한 프로젝트
+- [마켓컬리](https://www.kurly.com/shop/main/index.php?utm_source=1055&utm_medium=2202&utm_campaign=home_hashtag&utm_term=&gclid=CjwKCAiA9tyQBhAIEiwA6tdCrJeFgts5vbFCL6VrOjIAEPxfM0T2PrWZWCo67LxOtYnhvUAt6ywrLxoCDGMQAvD_BwE#%EB%A7%88%EC%BC%93%EC%BB%AC%EB%A6%AC&utm_content=brand) 사이트 디자인과 도서 API를 이용한 프로젝트
 - 2021.02.12 ~ 2021.02.28까지 2주간 진행 <br>
 
 ## 🖥 Work
@@ -52,10 +52,10 @@
 
 
 ### 3. Signup
-![signup_valiation](https://user-images.githubusercontent.com/67853616/155672862-06814f1b-7299-45db-ad75-d9c3c4b606ec.gif)
 
 
 ### 3-1. 정보 입력 값 조건 만족 여부에 시각화
+![signup_valiation](https://user-images.githubusercontent.com/67853616/155672862-06814f1b-7299-45db-ad75-d9c3c4b606ec.gif)
 * `<input>` 태그의 name과 value 속성 이용
 
 ```js
@@ -95,6 +95,10 @@
 <li className={IsPassword(Pwd) ? "true" : "false"}>
 ```
 ### 3-2. DaumPostcode 이용한 주소 정보
+![signup_address](https://user-images.githubusercontent.com/67853616/155673152-f6eb51b0-1bc2-4ed6-bb2c-474b4daf0140.gif)
+
+
+**주소 입력 상태 따른 input**
 <img width="483" alt="image" src="https://user-images.githubusercontent.com/67853616/155671820-c401164b-7a6a-489c-949c-3d855478f466.png">
 
 * 주소 입력값이 없는 경우 버튼을 클릭해 `DaumPostcode`가 실행되도록 함
@@ -107,3 +111,12 @@
 * 이미 받아온 주소가 있음으로 버튼에 문구는 주소 재검색으로 수정
 * 마지막 칸에는 추가적인 동호수 입력
 
+### 4. Login & User Profile
+#### 카카오 소셜 로그인
+![kakaologin](https://user-images.githubusercontent.com/67853616/155673585-d51da8c0-f009-48fe-b064-657b4c167ea0.gif)
+<img width="404" alt="image" src="https://user-images.githubusercontent.com/67853616/155674304-b16701e5-b688-4b1e-9c2d-8956e9a3bdae.png">
+
+* 카카오 로그인 성공해 user 정보를 **`crypto-js` 라이브러리 이용해 암호화 해** `localStorage`에 저장
+* 유저 정보가 있는 경우 우측 상단에는 **로그인/회원가입이 아닌 유저이름/유저정보**가 뜨도록 함
+* 내 정보 클릭 시 localStorage에 암호화되어 저장된 유저의 정보를 **복호화해 페이지에 보여줌**
+* 로그아웃 시 locaStorage의 정보를 삭제하고 **유저이름/유저정보가 아닌 로그인/회원가입**이 뜨도록 함
