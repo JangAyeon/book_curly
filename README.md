@@ -2,6 +2,7 @@
 
 - [마켓컬리](https://www.kurly.com/shop/main/index.php?utm_source=1055&utm_medium=2202&utm_campaign=home_hashtag&utm_term=&gclid=CjwKCAiA9tyQBhAIEiwA6tdCrJeFgts5vbFCL6VrOjIAEPxfM0T2PrWZWCo67LxOtYnhvUAt6ywrLxoCDGMQAvD_BwE#%EB%A7%88%EC%BC%93%EC%BB%AC%EB%A6%AC&utm_content=brand) 사이트 디자인과 도서 API를 이용한 프로젝트
 - 2021.02.12 ~ 2021.02.28까지 2주간 진행 <br>
+~~API 배포관련 문제로 영상 첨부~~
 
 ## 🖥 Work
 
